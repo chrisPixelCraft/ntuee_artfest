@@ -8,9 +8,12 @@ import { useLocation } from "react-router-dom";
 
 // Styled components
 const Container = styled.div`
-  width: calc(100dvw - 4rem);
+  margin-top: 25px;
+  /* width: calc(100dvw - 4rem); */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
   // border: 1px solid #000;
 `;
@@ -21,6 +24,7 @@ const ArtworkContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   column-gap: 50px;
   row-gap: 50px;
+  justify-content: center;
   // border: 1px solid #000;
   @media screen and (max-width: 637px) {
     grid-template-columns: repeat(2, 1fr);
@@ -48,7 +52,12 @@ const Subtitle = styled.h3<{ id: string }>`
   font-size: 1.5rem;
 `;
 
-type ArtworkType = "Photography" | "Drawings" | "Audiovisual" | "Calligraphy" | "Interactive";
+type ArtworkType =
+  | "Photography"
+  | "Drawings"
+  | "Audiovisual"
+  | "Calligraphy"
+  | "Interactive";
 const ArtWorkCards: React.FC<ArtworkType> = (type: ArtworkType) => {
   return (
     <ArtworkContainer>
@@ -94,31 +103,36 @@ const IntroductionPage: React.FC = () => {
   return (
     <Container>
       <ScrollToTop />
-      <SubtitleContainer>
+      <SubtitleContainer className="text-white">
         {/* <img src={placeholder} alt='info'></img> */}
         <Subtitle id="ArtworkContainer_Photography">攝影作品集</Subtitle>
       </SubtitleContainer>
       {ArtWorkCards("Photography")}
-      <SubtitleContainer>
+      <br />
+      <br />
+      <SubtitleContainer className="text-white">
         {/* <img src={placeholder} alt='info'></img> */}
         <Subtitle id="ArtworkContainer_Drawings">繪畫作品集</Subtitle>
       </SubtitleContainer>
       {ArtWorkCards("Drawings")}
+      <br />
       {/* <SubtitleContainer> */}
-        {/* <img src={placeholder} alt='info'></img> */}
-        {/* <Subtitle id="ArtworkContainer_Audiovisual">影視作品集</Subtitle> */}
+      {/* <img src={placeholder} alt='info'></img> */}
+      {/* <Subtitle id="ArtworkContainer_Audiovisual">影視作品集</Subtitle> */}
       {/* </SubtitleContainer> */}
       {/* {ArtWorkCards("Audiovisual")} */}
-      <SubtitleContainer>
+      <SubtitleContainer className="text-white">
         {/* <img src={placeholder} alt='info'></img> */}
         <Subtitle id="ArtworkContainer_Calligraphy">書法作品集</Subtitle>
       </SubtitleContainer>
       {ArtWorkCards("Calligraphy")}
-      <SubtitleContainer>
+      <br />
+      <SubtitleContainer className="text-white">
         {/* <img src={placeholder} alt='info'></img> */}
         <Subtitle id="ArtworkContainer_Interactive">互動藝術作品集</Subtitle>
       </SubtitleContainer>
       {ArtWorkCards("Interactive")}
+      <br />
     </Container>
   );
 };
