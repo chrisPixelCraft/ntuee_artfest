@@ -4,14 +4,23 @@ import styled from "styled-components";
 import mainVisual_h from "../images/mainVisual_h.jpg";
 import mainVisual_v from "../images/mainVisual_v.jpg";
 
-
 // Styled components
 const Container = styled.div`
   padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
+
 const HeaderContainer = styled.div`
   // width: calc(100vw - 4rem - 1.6rem);
   // height: 40vh;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+
   display: grid;
   grid-column-gap: 1.6rem;
   grid-template-columns: 1fr 40%;
@@ -19,41 +28,57 @@ const HeaderContainer = styled.div`
   align-content: start;
   align-items: center;
   position: relative;
-  padding: 0.5rem 2rem;
-  // border: 1px solid #000; 
+  padding: 4rem;
+  color: white;
+  @media screen and (max-width: 1000px) {
+    /* grid-template-columns: 1fr; // Makes it a single column layout on mobile
+    justify-content: center; // Centers content horizontally
+    align-items: center; // Ensure the content is centered vertically as well
+    padding: 4rem 1rem; // Adjusts padding to increase gap
+    grid-row-gap: 2rem; // Increases the gap between rows (i.e., between your text and photo) */
+    grid-row-gap: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // border: 1px solid #000;
   .tab {
     display: inline-block;
     margin-left: 80px;
-    @media (max-width:  1290px) {
+    @media (max-width: 1290px) {
       margin-left: 80px;
     }
-    @media (max-width:  1130px) {
+    @media (max-width: 1130px) {
       margin-left: 80px;
     }
-    @media (max-width:  970px) {
+    @media (max-width: 970px) {
       margin-left: 40px;
     }
-    @media (max-width:  860px) {
+    @media (max-width: 860px) {
       margin-left: 30px;
     }
-    @media (max-width:  445px) {
+    @media (max-width: 445px) {
       margin-left: 15px;
     }
-    @media (max-width:  383px) {
+    @media (max-width: 383px) {
       margin-left: 10px;
     }
   }
   .word {
     width: 50vw;
-    height: auto;
+    height: 70vh;
+    overflow: auto;
     max-height: 37.5vh;
-<<<<<<< Updated upstream
     overflow: hidden;
-=======
-    border: 1px solid #000;
->>>>>>> Stashed changes
+    /* border: 1px solid #000; */
     display: inline-block;
     margin-left: 10px;
+    /* @media screen and (max-width: 1000px) {
+      font-size: 1.5rem;
+    } */
   }
   .pic {
     // width: 30vw;
@@ -64,12 +89,12 @@ const HeaderContainer = styled.div`
     display: inline-block;
     margin-left: 10px;
     .pic_v {
-      @media (min-width:  500px) {
+      @media (min-width: 500px) {
         display: none;
       }
     }
     .pic_h {
-      @media (max-width:  500px) {
+      @media (max-width: 500px) {
         display: none;
       }
     }
@@ -82,65 +107,140 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const HeaderTitle = styled.h1`
-  font-size: 3.5rem;
+// const HeaderTitle = styled.h1`
+//   font-size: 5rem; // Base size for larger screens
+//   margin-bottom: 2rem;
+//   @media (max-width: 1290px) {
+//     font-size: 3rem; // Slight reduction for smaller laptops
+//   }
+//   @media (max-width: 970px) {
+//     font-size: 3rem; // Further reduction for tablets
+//   }
+//   @media (max-width: 700px) {
+//     font-size: 2.5rem; // Comfortable size for large phones
+//   }
+//   @media (max-width: 572px) {
+//     font-size: 2rem; // Readable size for smaller phones
+//   }
+//   @media (max-width: 415px) {
+//     font-size: 2rem; // Minimum size to ensure readability on very small devices
+//   }
+// `;
+
+export const HeaderTitle = styled.h1`
+  font-size: 3.5rem; // Base size for larger screens
   margin-bottom: 2rem;
-  @media (max-width:  1290px) {
-    font-size: 3rem;
+  @media (max-width: 1290px) {
+    font-size: 3rem; // Slight reduction for smaller laptops
   }
-  @media (max-width:  1130px) {
-    font-size: 2.5rem;
+  @media (max-width: 970px) {
+    font-size: 3rem; // Further reduction for tablets
   }
-  @media (max-width:  970px) {
-    font-size: 2.4053rem;
+  @media (max-width: 700px) {
+    font-size: 2.5rem; // Comfortable size for large phones
   }
-  @media (max-width:  830px) {
-    font-size: 2rem;
+  @media (max-width: 572px) {
+    font-size: 2rem; // Readable size for smaller phones
   }
-  @media (max-width:  700px) {
-    font-size: 1.6rem;
-  }
-  @media (max-width:  572px) {
-    font-size: 1.2rem;
-  }
-  @media (max-width:  415px) {
-    font-size: 1.1rem;
+  @media (max-width: 415px) {
+    font-size: 2rem; // Minimum size to ensure readability on very small devices
   }
 `;
 
 const HeaderSubtitle = styled.div`
-  font-size: 1rem;
-<<<<<<< Updated upstream
+  font-size: 1.3rem; // Base size for desktop
   line-height: 1.3;
-  @media (max-width:  1290px) {
-    font-size: 0.9rem;
+  @media (max-width: 1290px) {
+    font-size: 1.3rem; // Minor adjustment for smaller laptops
   }
-  @media (max-width:  1130px) {
-    font-size: 0.8rem;
+  @media (max-width: 970px) {
+    font-size: 1.3rem; // Suitable for tablets
   }
-  @media (max-width:  970px) {
-    font-size: 0.7rem;
+  @media (max-width: 700px) {
+    font-size: 0.9rem; // Adjust for large phones
   }
-  @media (max-width:  830px) {
-    font-size: 0.6rem;
+  @media (max-width: 572px) {
+    font-size: 0.8rem; // Minimum size for readability on smaller phones
   }
-  @media (max-width:  830px) {
-    font-size: 0.55rem;
+  @media (max-width: 415px) {
+    font-size: 0.7rem; // Avoid going too small to maintain legibility
   }
-  @media (max-width:  415px) {
-    font-size: 0.45rem;
+`;
+
+// const HeaderTitle = styled.h1`
+//   font-size: 3.5rem;
+//   margin-bottom: 2rem;
+//   @media (max-width: 1290px) {
+//     font-size: 3rem;
+//   }
+//   @media (max-width: 1130px) {
+//     font-size: 2.5rem;
+//   }
+//   @media (max-width: 970px) {
+//     font-size: 2.4053rem;
+//   }
+//   @media (max-width: 830px) {
+//     font-size: 2rem;
+//   }
+//   @media (max-width: 700px) {
+//     font-size: 1.6rem;
+//   }
+//   @media (max-width: 572px) {
+//     font-size: 1.2rem;
+//   }
+//   @media (max-width: 415px) {
+//     font-size: 1.1rem;
+//   }
+// `;
+
+// const HeaderSubtitle = styled.div`
+//   font-size: 1rem;
+//   line-height: 1.3;
+//   @media (max-width: 1290px) {
+//     font-size: 0.9rem;
+//   }
+//   @media (max-width: 1130px) {
+//     font-size: 0.8rem;
+//   }
+//   @media (max-width: 970px) {
+//     font-size: 0.7rem;
+//   }
+//   @media (max-width: 830px) {
+//     font-size: 0.6rem;
+//   }
+//   @media (max-width: 830px) {
+//     font-size: 0.55rem;
+//   }
+//   @media (max-width: 415px) {
+//     font-size: 0.45rem;
+//   }
+//   /* line-height: 1.5;
+//   overflow-y: scroll; */
+// `;
+
+const BottomHeight = styled.div`
+  height: 9rem;
+
+  @media (max-width: 768px) {
+    // Adjust this breakpoint as needed
+    height: 4rem; // Height for mobile devices
   }
-=======
-  line-height: 1.5;
-  overflow-y: scroll;
->>>>>>> Stashed changes
 `;
 
 const ContributerContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
+  padding: 3rem;
+  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  @media (max-width: 572px) {
+    padding: 1rem;
+  }
 `;
 
 const Contributer = styled.div`
@@ -152,18 +252,18 @@ const Contributer = styled.div`
 const AboutUsPage: React.FC = () => {
   return (
     <Container>
+      <div style={{ height: "3rem" }}></div>
+
       <HeaderContainer>
         <div className="word">
-          <HeaderTitle>
-            「藝術一瞬
-            <div className="tab" />
-            感動永恆」
-          </HeaderTitle>
-          <HeaderSubtitle>
-            在藝術的殿堂裡，一瞬間成就永恆。畫筆輕撫畫布，如詩如畫地描繪著情感的交錯，色彩的交融。音符飄逸在空氣中，彷彿是靈魂的共鳴，撫慰著每一顆疲憊的心靈。
-            這裡是藝術的聚集地，是夢想的搖籃，是感動的源泉。每一幅畫作都是一段故事的開始，每一首樂曲都是一場心靈的對話。在這片藝術的海洋裡，我們不僅能夠看見，更能夠感受到，那些美好的瞬間，那些永恆的價值。
-            藝術一瞬，感動永恆。那一刻的震撼，那一刻的感動，將伴隨著我們走過人生的旅程，永遠在心中閃耀。讓我們沉浸在藝術的海洋中，讓我們感受那份純淨的美好，讓我們一起去探索，去追尋，去創造。
-          </HeaderSubtitle>
+          <HeaderTitle>藝術一瞬．感動永恆</HeaderTitle>
+
+          <blockquote
+            cite="http://www.worldwildlife.org/who/index.html"
+            className="text-sm sm:text-lg"
+          >
+            在藝術的殿堂裡，一瞬間成就永恆。畫筆輕撫畫布，描繪情感的交錯。音符飄逸在空氣中，引起靈魂的共鳴。
+          </blockquote>
         </div>
         <div className="pic">
           <img className="pic_h" src={mainVisual_h} alt="Art" />
@@ -185,6 +285,8 @@ const AboutUsPage: React.FC = () => {
           />
         </Contributer>
       </ContributerContainer>
+      {/* <div style={{ height: "9rem" }}></div> */}
+      <BottomHeight />
     </Container>
   );
 };

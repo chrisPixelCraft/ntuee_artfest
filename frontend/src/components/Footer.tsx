@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const LeftFooter = styled.div`
-  width: 100%;
+  width: 15%;
   border-radius: 50%;
 `;
 
@@ -13,17 +13,25 @@ const IconImage = styled.img`
 `;
 
 const FooterContainer = styled.div`
-  background-color: #f8f9fa;
-  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  /* width: 100%; */
+  /* background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
+  backdrop-filter: blur(10px);
+  background-size: cover; */
+  /* padding: 3rem; */
   text-align: center;
   position: relative;
   bottom: 0;
-  width: calc(96%);
-  footer {
+  /* width: calc(96%); */
+  /* footer {
     p {
       margin: 0;
     }
-  }
+  } */
 `;
 
 const MiddleFooter = styled.div`
@@ -36,7 +44,7 @@ const MiddleFooter = styled.div`
   .footer_logo_word {
     font-size: 1.5rem;
     @media (max-width: 850px) {
-      font-size: 1.0rem;
+      font-size: 1rem;
     }
     @media (max-width: 610px) {
       font-size: 0.7rem;
@@ -51,7 +59,7 @@ const ImagesContainer = styled.div`
   display: flex;
   width: 60%;
   padding: 0 20%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 const SingleImageContainer = styled.div`
@@ -74,7 +82,7 @@ const RightFooter = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   p {
     font-size: 1.5rem;
@@ -91,6 +99,7 @@ const RightFooter = styled.div`
 `;
 
 const ContributerGrid = styled.div`
+  display: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -124,56 +133,36 @@ interface FProps {
 }
 const Footer: React.FC<FProps> = ({ ref }) => {
   return (
-    <FooterContainer ref={ref}>
-      <footer>
+    <FooterContainer className="bg-yellow-306 text-white p-2 font-futura bg-opacity-20 backdrop-blur-md w-full ">
+      <footer className="text-white w-full flex justify-evenly">
         <LeftFooter>
           <IconImage
             src="/mainIcon.png"
             alt="mainIcon"
-            width="100%"
-            height="100%"
+            width="20%"
+            height="20%"
           />
         </LeftFooter>
-        <div></div>
-        <MiddleFooter>
-          <ImagesContainer>
-            <SingleImageContainer>
-              <a href="https://www.facebook.com/profile.php?id=100082950921250">
-                <img src="/facebook.png" alt="facebook" width="100%" />
-              </a>
-            </SingleImageContainer>
-            <SingleImageContainer>
-              <a href="https://www.instagram.com/ntuee_artfest?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <img src="/instagram.png" alt="instagram" width="100%" />
-              </a>
-            </SingleImageContainer>
-            <SingleImageContainer>
-              <a
-                href="
-              mailto:ntueeart@gmail.com"
-              >
-                <img src="/gmail.png" alt="Gmail" width="100%" />
-              </a>
-            </SingleImageContainer>
-          </ImagesContainer>
-          <p className="footer_logo_word">© 2024 NTUEE Art Festival</p>
-        </MiddleFooter>
+        {/* <div className=" text-white text-sm sm:text-lg ">
+          copyright ©️ NTUEE Artfest
+        </div> */}
+
         <RightFooter>
           <div style={{ width: "100%" }}>
-            <p>Contributors</p>
+            <p>Contributors </p>
           </div>
           <ContributerGrid>
             <Contributer>
-              <p>© Walker</p>
+              <p>© Walker Hsu</p>
             </Contributer>
             <Contributer>
-              <p>© Oscar</p>
+              <p>© Oscar Fu</p>
             </Contributer>
             <Contributer>
-              <p>© Wu</p>
+              <p>© Cheng Hsi Wu</p>
             </Contributer>
             <Contributer>
-              <p>© Hsieh</p>
+              <p>© Chris Hsieh</p>
             </Contributer>
           </ContributerGrid>
         </RightFooter>

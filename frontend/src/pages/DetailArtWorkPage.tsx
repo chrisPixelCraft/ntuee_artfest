@@ -40,7 +40,7 @@ const DetailArtWorkPage: React.FC = () => {
             <p>{image["introduction"]}</p>
           </section>
         </div>
-        <div style={{height: "20rem"}}></div>
+        <div style={{ height: "20rem" }}></div>
       </div>
     </>
   );
