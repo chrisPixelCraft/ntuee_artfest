@@ -62,7 +62,7 @@ const Title = styled.h1`
   /* font-size: 3rem;
   margin-bottom: 2rem; */
   font-family: "Futura", sans-serif;
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   /* Ensure horizontal display */
   writing-mode: horizontal-tb; /* Set text to horizontal writing mode */
@@ -139,7 +139,7 @@ const Styleda = styled.a`
   @media (max-width: 440px) {
     /* width: 100px; fixed width for smaller screens */
     /* height: 150px; fixed height for smaller screens */
-    padding: 10px 18px; /* padding to fit the text vertically */
+    padding: 8px 16px; /* padding to fit the text vertically */
     font-size: 1.15rem;
     display: flex;
     flex-direction: column;

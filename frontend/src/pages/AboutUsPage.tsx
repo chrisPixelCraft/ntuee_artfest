@@ -274,7 +274,11 @@ const AboutUsPage: React.FC = () => {
           >
             在藝術的殿堂裡，一瞬間成就永恆。畫筆輕撫畫布，描繪情感的交錯。音符飄逸在空氣中，引起靈魂的共鳴。
           </blockquote>
+          <br />
+          <br />
+          <br />
         </div>
+
         <div className="pic">
           <img className="pic_h" src={mainVisual_h} alt="Art" />
           <img className="pic_v" src={mainVisual_v} alt="Art" />
