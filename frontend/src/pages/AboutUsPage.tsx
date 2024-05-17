@@ -153,7 +153,7 @@ export const HeaderTitle = styled.h1`
     font-size: 2.5rem; // Readable size for smaller phones
   }
   @media (max-width: 415px) {
-    font-size: 2.5rem; // Minimum size to ensure readability on very small devices
+    font-size: 2rem; // Minimum size to ensure readability on very small devices
   }
 `;
 
