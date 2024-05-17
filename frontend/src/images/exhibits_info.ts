@@ -158,6 +158,12 @@ export const IMAGE_INFO = [
         author: "楊珩",
       },
       {
+        image: "/exhibits/水彩七連-7.png",
+        introduction: "Zebra",
+        title: "水彩七連-7",
+        author: "楊珩",
+      },
+      {
         image: "/exhibits/碼.jpg",
         introduction:
           "獨自坐在桌前，與未接觸過的程式元素共舞，\n看著被 Swift 打破的 Windows、\n眼前啜飲一口 Java 的 Linux、\n在窗外虎視眈眈的 Postgres，\n自己一無所知，卻無所畏懼、勇往直前。",
@@ -189,28 +195,28 @@ export const IMAGE_INFO = [
         author: "許蘊琰",
       },
       {
-        image: "/exhibits/弦之鏡.jpg",
+        image: "/exhibits/弦之鏡.png",
         introduction:
           "由無數聯繫交織而成的，複雜的你。歡迎留下影跡。\n 連結：https://tingwoo.github.io/Strings-Expo/",
         title: "弦之鏡",
         author: "張庭梧",
       },
       {
-        image: "/exhibits/弦之鏡-2.jpg",
+        image: "/exhibits/弦之鏡-2.png",
         introduction:
           "由無數聯繫交織而成的，複雜的你。歡迎留下影跡。\n 連結：https://tingwoo.github.io/Strings-Expo/",
         title: "弦之鏡-2",
         author: "張庭梧",
       },
       {
-        image: "/exhibits/stargunonline.jpg",
+        image: "/exhibits/stargunonline.png",
         introduction:
           "置身星際，與機器人對戰\n模式：循環生存 \n 下載連結：https://iiil.io/jDcS",
         title: "star gun online",
         author: "謝銘倫,林昀萱,劉育成",
       },
       {
-        image: "/exhibits/stargunonline2.jpg",
+        image: "/exhibits/stargunonline2.png",
         introduction:
           "置身星際，與機器人對戰\n模式：循環生存 \n 下載連結：https://iiil.io/jDcS",
 

@@ -2,6 +2,14 @@ import { useParams } from "react-router-dom";
 import { IMAGE_INFO } from "../images/exhibits_info";
 import "../CSS/DetailArtWorkPage.css";
 import ErrorPage from "./ErrorPage";
+import styled from "styled-components";
+
+const Styledp = styled.p`
+  text-align: center;
+  padding: 2rem;
+  /* margin: 0 0 2rem 0; */
+  color: white;
+`;
 
 const DetailArtWorkPage: React.FC = () => {
   const { type, index } = useParams();
@@ -15,6 +23,7 @@ const DetailArtWorkPage: React.FC = () => {
     return <ErrorPage />;
   }
   console.log(image);
+
   return (
     <>
       {/* Wrapper */}
@@ -32,15 +41,15 @@ const DetailArtWorkPage: React.FC = () => {
             <header className="major">
               <span className="date">{type}</span>
               <h1>{image["title"]}</h1>
-              <p>作者：{image["author"]}</p>
+              <Styledp>作者：{image["author"]}</Styledp>
             </header>
             <div className="image main">
               <img src={image["image"]} alt="" />
             </div>
-            <p>{image["introduction"]}</p>
+            <Styledp>{image["introduction"]}</Styledp>
           </section>
         </div>
-        <div style={{ height: "20rem" }}></div>
+        <div style={{ height: "15rem" }}></div>
       </div>
     </>
   );
