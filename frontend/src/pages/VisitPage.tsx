@@ -85,6 +85,7 @@ const VideoBlockContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
     background-color: rgba(0, 0, 0, 0.3); // Semi-transparent background
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Soft shadow for depth
@@ -167,6 +168,7 @@ const Section = styled.section`
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  margin-top: 1.4rem;
 `;
 
 const Title = styled.h3`
@@ -310,6 +312,8 @@ const VisitPage: React.FC = () => {
             <br />
             <br />
             <br />
+            <br />
+            <br />
 
             <div className="videoIntroVideo">
               <VideoContainer>
@@ -347,6 +351,10 @@ const VisitPage: React.FC = () => {
               <p className="p-3">Credit： 蘇絹淇、謝銘倫、 董家愷、林育正</p>
             </div>
             <br />
+            <br />
+            <br />
+            <br />
+
             <div className="videoIntroVideo">
               <VideoContainer>
                 {/* Add opening video */}
