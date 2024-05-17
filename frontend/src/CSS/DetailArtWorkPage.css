@@ -8,20 +8,20 @@
 /* Wrapper */
 
 #wrapper {
-  background-color: #212931;
+  /* background-color: #212931;
   background-image: url("../images/bg7.png"),
     linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url("../images/mainVisual_h.jpg");
   background-size: auto, auto, 100% auto;
   background-position: center, center, top center;
   background-repeat: repeat, no-repeat, no-repeat;
-  background-attachment: fixed, fixed, fixed;
+  background-attachment: fixed, fixed, fixed; */
   padding: 20px;
 }
 
-#wrapper.fade-in:before {
+/* #wrapper.fade-in:before {
   display: none;
-}
+} */
 
 /* Intro */
 
@@ -116,12 +116,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 section.special,
 article.special {
   text-align: center;
-}
-
-p {
-  text-align: center;
-  margin: 0 0 2rem 0;
-  color: white;
 }
 
 /* Header */
@@ -241,9 +235,9 @@ header.major .date:after {
   border-top: 0;
 }
 
-#main > footer {
+/* #main > footer {
   text-align: center;
-}
+} */
 
 #main > .post {
   display: flex;

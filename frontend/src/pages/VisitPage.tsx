@@ -4,8 +4,10 @@ import styled from "styled-components";
 import visit from "../images/visit0.jpg";
 import info from "../images/info.png";
 import intro from "../images/intro.png";
+import fakeVideo_2 from "../images/fakeVideo_2.png";
 import fakeVideo from "../images/fakeVideo.png";
 import fakeVideo2 from "../images/fakeVideo2.png";
+import fakeVideo2_2 from "../images/fakeVideo2_2.png";
 import placeholder from "../images/placeholder.png";
 import idea from "../images/idea.png";
 import { Gallery } from "../components/VisitPage/Gallery";
@@ -94,14 +96,24 @@ const VideoBlockContainer = styled.div`
       transform: translateY(-2px); // Lift effect on hover
     }
     .videoIntroWord {
-      width: 40%;
+      /* width: 40%;
       height: 85%;
       // border: 1px solid black;
       margin: 0.5rem;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: flex-start;
+      padding: 1rem; */
+      width: 40%;
+      height: 85%;
+      margin: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Align content towards the top */
+      align-items: flex-start;
+      padding: 3.9rem;
+      box-sizing: border-box; /* Ensure padding is included in the height */
     }
 
     .videoIntroVideo {
@@ -126,8 +138,11 @@ const VideoBlockContainer = styled.div`
       flex-direction: column;
       height: 730px;
       .videoIntroWord {
+        justify-content: flex-start;
+        align-items: flex-start;
         width: 100%;
         height: 20%;
+        padding: 1rem;
       }
       .videoIntroVideo {
         width: 100%;
@@ -290,7 +305,7 @@ const VisitPage: React.FC = () => {
                 展覽共有五大展區: 攝影區、書法區、觀影區、互動藝術區、畫作區
               </p>
               <p className="p-4">歡迎蒞臨觀展！</p>
-              <p className="p-3">（Credit：謝銘倫）</p>
+              <p className="p-3">Credit：謝銘倫、林昀萱</p>
             </div>
             <br />
             <br />
@@ -310,17 +325,26 @@ const VisitPage: React.FC = () => {
                   ref={openingIframeRef}
                   style={{ display: "none" }}
                 ></iframe>
-                <img src={fakeVideo} alt="iframeImage" onClick={playVideo(0)} />
+                <picture>
+                  <source srcSet={fakeVideo_2} media="(max-width: 600px)" />
+                  <source srcSet={fakeVideo} media="(min-width: 601px)" />
+                  <img
+                    src={fakeVideo_2}
+                    alt="iframeImage"
+                    onClick={playVideo(0)}
+                  />
+                </picture>
+                {/* <img src={fakeVideo} alt="iframeImage" onClick={playVideo(0)} /> */}
               </VideoContainer>
             </div>
           </div>
           <div className="singleVideoBlock">
             <div className="videoIntroWord">
               <Subtitle className="p-3 text-2xl">採訪片合集</Subtitle>
-              <p className="p-3">
-                特別感謝：陳竣瑋、楊詠翔、王瑋、楊珩、吳柏均、張庭梧、謝銘倫
+              <p className="p-3 leading-relaxed">
+                特別感謝： 陳竣瑋、楊詠翔、王瑋、楊珩、 吳柏均、張庭梧、謝銘倫
               </p>
-              <p className="p-3">（Credit：蘇絹淇、謝銘倫、董家愷、林育正）</p>
+              <p className="p-3">Credit： 蘇絹淇、謝銘倫、 董家愷、林育正</p>
             </div>
             <br />
             <div className="videoIntroVideo">
@@ -337,11 +361,20 @@ const VisitPage: React.FC = () => {
                   ref={closingIframeRef}
                   style={{ display: "none" }}
                 ></iframe>
-                <img
+                <picture>
+                  <source srcSet={fakeVideo2_2} media="(max-width: 600px)" />
+                  <source srcSet={fakeVideo2} media="(min-width: 601px)" />
+                  <img
+                    src={fakeVideo2_2}
+                    alt="iframeImage"
+                    onClick={playVideo(1)}
+                  />
+                </picture>
+                {/* <img
                   src={fakeVideo2}
                   alt="iframeImage"
                   onClick={playVideo(1)}
-                />
+                /> */}
               </VideoContainer>
             </div>
           </div>

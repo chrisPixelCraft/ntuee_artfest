@@ -157,7 +157,7 @@ const NavBar: React.FC<IProps> = ({ handleClick }) => {
       <header className="bg-yellow-306 text-white p-2 font-futura fixed top-0 left-0 right-0 z-50 bg-opacity-50 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="text-4xl hover:text-gray-200">
-            <h1 className="sm:p-1 ">NTUEE Artfest</h1>
+            <h1 className="sm:p-1 p-2 ">NTUEE Artfest</h1>
           </Link>
           {/* Hamburger menu button for mobile */}
           <button

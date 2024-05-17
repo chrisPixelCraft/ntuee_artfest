@@ -7,6 +7,7 @@ import { ArtworkCard } from "../components/ArtworkCard";
 import { motion } from "framer-motion";
 import { IMAGE_INFO } from "../images/exhibits_info";
 import Slideshow from "../components/HomePage/Slideshow";
+import { useMediaQuery } from "react-responsive";
 
 // Styled components
 const TitleContainer = styled.h3`
@@ -21,6 +22,7 @@ const TitleContainer = styled.h3`
 
 const MainContainer = styled.div`
   /* width: calc(100% - 2rem - 2px); */
+  width: 100%;
   height: 100%;
   /* height: 4vh; */
   text-align: center;
@@ -28,9 +30,9 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #000;
+  /* margin: 0.5rem; */
+  /* padding: 0.5rem; */
+  /* border: 1px solid #000; */
   background-image: url(${gallery});
   background-size: cover;
   background-position: center;
@@ -57,8 +59,15 @@ const WordContainer = styled.div.attrs<
 `;
 
 const Title = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  /* font-size: 3rem;
+  margin-bottom: 2rem; */
+  font-family: "Futura", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const GridContainer = styled.div`
@@ -85,6 +94,23 @@ const GridContainer = styled.div`
   }
 `;
 
+// const Styleda = styled.a`
+//   color: white;
+//   text-decoration: none;
+//   border: 1px solid #acacac;
+//   padding: 10px 20px;
+//   border-radius: 5px;
+//   transition: background-color 0.3s, border-color 0.3s, color 0.3s; // Smooth transition for hover effect
+
+//   &:hover {
+//     background-color: #acacac; // Change background color on hover
+//     color: black; // Change text color on hover
+//     border-color: #888; // Change border color on hover
+//   }
+//   @media (max-width: 768px) {
+//     padding: 10px 8px;
+//   }
+// `;
 const Styleda = styled.a`
   color: white;
   text-decoration: none;
@@ -98,12 +124,17 @@ const Styleda = styled.a`
     color: black; // Change text color on hover
     border-color: #888; // Change border color on hover
   }
+
+  @media (max-width: 768px) {
+    padding: 10px 14px;
+  }
 `;
 
 // Component
 const HomePage: React.FC = () => {
   const [width, setWidth] = useState(0);
   const carousel: RefObject<HTMLDivElement> = useRef(null);
+  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   useEffect(() => {
     setWidth(carousel.current!.scrollWidth - carousel.current!.clientWidth);
@@ -145,6 +176,7 @@ const HomePage: React.FC = () => {
         </TitleContainer>
       </MainContainer>
       {/* <div>hi</div> */}
+      {isMobile && <br />}
 
       <GridContainer>
         <motion.div

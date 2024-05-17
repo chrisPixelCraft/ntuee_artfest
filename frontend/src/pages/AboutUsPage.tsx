@@ -80,34 +80,44 @@ const HeaderContainer = styled.div`
       font-size: 1.5rem;
     } */
   }
+
   .pic {
-    // width: 30vw;
-    // height: 30vh;
     max-height: 37.5vh;
     border-radius: 30px;
     overflow: hidden;
     display: inline-block;
     margin-left: 10px;
+    position: relative; /* Added for relative positioning of child elements */
+
+    img {
+      width: 100%;
+      height: auto; /* Maintains aspect ratio */
+      display: block;
+      object-fit: contain; /* Ensures the whole image is displayed */
+      /* overflow: hidden; */
+    }
+
     .pic_v {
+      display: block;
       @media (min-width: 500px) {
         display: none;
       }
     }
+
     .pic_h {
-      @media (max-width: 500px) {
-        display: none;
+      display: none;
+      @media (min-width: 500px) {
+        display: block;
       }
     }
-    img {
-      width: 100%;
-      // height: 100%;
-    }
   }
-  @media (max-width: 700px) {
-  }
-`;
 
-// const HeaderTitle = styled.h1`
+  @media (max-width: 700px) {
+    /* Optional additional styling for max-width 700px */
+  }
+
+  // const HeaderTitle = styled.h1
+`;
 //   font-size: 5rem; // Base size for larger screens
 //   margin-bottom: 2rem;
 //   @media (max-width: 1290px) {
@@ -131,19 +141,19 @@ export const HeaderTitle = styled.h1`
   font-size: 3.5rem; // Base size for larger screens
   margin-bottom: 2rem;
   @media (max-width: 1290px) {
-    font-size: 3rem; // Slight reduction for smaller laptops
+    font-size: 2.5rem; // Slight reduction for smaller laptops
   }
   @media (max-width: 970px) {
-    font-size: 3rem; // Further reduction for tablets
+    font-size: 2.5rem; // Further reduction for tablets
   }
   @media (max-width: 700px) {
     font-size: 2.5rem; // Comfortable size for large phones
   }
   @media (max-width: 572px) {
-    font-size: 2rem; // Readable size for smaller phones
+    font-size: 2.5rem; // Readable size for smaller phones
   }
   @media (max-width: 415px) {
-    font-size: 2rem; // Minimum size to ensure readability on very small devices
+    font-size: 2.5rem; // Minimum size to ensure readability on very small devices
   }
 `;
 
@@ -260,7 +270,7 @@ const AboutUsPage: React.FC = () => {
 
           <blockquote
             cite="http://www.worldwildlife.org/who/index.html"
-            className="text-sm sm:text-lg"
+            className="text-lg sm:text-lg md:text-xl lg:text-xl text-center sm:text-left leading-relaxed sm:leading-loose"
           >
             在藝術的殿堂裡，一瞬間成就永恆。畫筆輕撫畫布，描繪情感的交錯。音符飄逸在空氣中，引起靈魂的共鳴。
           </blockquote>

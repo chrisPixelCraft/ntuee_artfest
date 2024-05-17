@@ -120,10 +120,10 @@ const Contributer = styled.div`
       font-size: 0.8rem;
     }
     @media (max-width: 610px) {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
     }
     @media (max-width: 466px) {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
     }
   }
 `;
@@ -133,7 +133,10 @@ interface FProps {
 }
 const Footer: React.FC<FProps> = ({ ref }) => {
   return (
-    <FooterContainer className="bg-yellow-306 text-white p-2 font-futura bg-opacity-20 backdrop-blur-md w-full ">
+    <FooterContainer
+      className="bg-yellow-306 text-white p-2 font-futura bg-opacity-20 backdrop-blur-md w-full
+    z-0 "
+    >
       <footer className="text-white w-full flex justify-evenly">
         <LeftFooter>
           <IconImage
