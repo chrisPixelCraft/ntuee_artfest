@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
@@ -118,8 +118,19 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
     setClicked(true);
     setTimeout(() => {
       navigate(`/artwork/${type}/${index}`);
+      setClicked(false); // Reset the clicked state after navigating
     }, 100); // Delay to ensure state update is visible before navigation
   };
+
+  // Optional: Reset the clicked state after a fixed delay
+  useEffect(() => {
+    if (clicked) {
+      const timer = setTimeout(() => {
+        setClicked(false);
+      }, 500); // Adjust the delay as needed
+      return () => clearTimeout(timer);
+    }
+  }, [clicked]);
 
   return (
     <ArtworkCardContainer clicked={clicked} onClick={handleClick}>
