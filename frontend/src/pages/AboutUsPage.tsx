@@ -270,7 +270,7 @@ const AboutUsPage: React.FC = () => {
 
           <blockquote
             cite="http://www.worldwildlife.org/who/index.html"
-            className="text-lg sm:text-lg md:text-xl lg:text-xl text-center sm:text-left leading-relaxed sm:leading-loose"
+            className="text-sm sm:text-lg md:text-xl lg:text-xl text-center sm:text-left leading-relaxed sm:leading-loose"
           >
             在藝術的殿堂裡，一瞬間成就永恆。畫筆輕撫畫布，描繪情感的交錯。音符飄逸在空氣中，引起靈魂的共鳴。
           </blockquote>
